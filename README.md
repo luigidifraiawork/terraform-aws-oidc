@@ -1,13 +1,13 @@
-# Configure OpenID Connect in AWS to retrieve temporary credentials
+# Configure OpenID Connect in AWS to retrieve temporary credentials and access services in AWS
 
 Parts from: https://gitlab.com/guided-explorations/aws/configure-openid-connect-in-aws
 
 ## Use-cases
 - Retrieve temporary credentials from AWS to access cloud services
-- Use credentials to retrieve secrets or deploy to an environment
+- Use credentials to access services in AWS, e.g. retrieve secrets or deploy to an environment
 
 ## Examples
-- [GitLab](https://github.com/luigidifraiawork/terraform-aws-oidc/tree/main/examples/gitlab) - Creates an IAM identity provider for GitLab OIDC, an IAM role that trusts the IAM GitLab OIDC provider, and IAM role for deployment purposes that trusts the latter.  
+- [GitLab](https://github.com/luigidifraiawork/terraform-aws-oidc/tree/main/examples/gitlab) - Creates an IAM identity provider for GitLab OIDC, an IAM role that trusts the IAM GitLab OIDC provider, and an IAM role for deployment purposes that trusts the latter.  
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
