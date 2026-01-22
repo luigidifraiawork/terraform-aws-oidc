@@ -1,6 +1,6 @@
-# Configure OpenID Connect in AWS for a GitLab CI/CD job to retrieve temporary credentials
+# Configure OpenID Connect in AWS for a GitLab CI/CD job to retrieve temporary credentials and access services in AWS
 
-The Terraform manifests provided in this folder create an IAM identity provider for GitLab OIDC, an IAM role that trusts the IAM GitLab OIDC provider, and IAM role for deployment purposes that trusts the latter. In fact, the OIDC role is used as a jump role that can assume further roles with limited permissions for their specific deployment requirements.
+The Terraform manifests provided in this folder create an IAM identity provider for GitLab OIDC, an IAM role that trusts the IAM GitLab OIDC provider, and an IAM role for deployment purposes that trusts the latter. In fact, the OIDC role is used as a jump role that can assume further roles with limited permissions for their specific deployment requirements.
 
 ## Usage
 
