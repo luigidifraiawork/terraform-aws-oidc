@@ -66,7 +66,6 @@ resource "aws_iam_role" "this" {
   description = var.description
 
   assume_role_policy    = data.aws_iam_policy_document.this.json
-  managed_policy_arns   = [aws_iam_policy.this.arn]
   permissions_boundary  = var.permissions_boundary_arn
   force_detach_policies = var.force_detach_policies
 
@@ -74,4 +73,9 @@ resource "aws_iam_role" "this" {
     var.tags,
     { "Name" : var.name }
   )
+}
+
+resource "aws_iam_role_policy_attachment" "this" {
+  role       = aws_iam_role.this.name
+  policy_arn = aws_iam_policy.this.arn
 }
