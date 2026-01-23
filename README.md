@@ -4,7 +4,6 @@ Parts from: https://gitlab.com/guided-explorations/aws/configure-openid-connect-
 
 ## Use-cases
 - Retrieve temporary credentials from AWS to access cloud services
-- Use credentials to access services in AWS, e.g. retrieve secrets or deploy to an environment
 
 ## Examples
 - [GitLab](https://github.com/luigidifraiawork/terraform-aws-oidc/tree/main/examples/gitlab) - Creates an IAM identity provider for GitLab OIDC, an IAM role that trusts the IAM GitLab OIDC provider, and an IAM role for deployment purposes that trusts the latter.  
@@ -36,6 +35,7 @@ No modules.
 | [aws_iam_openid_connect_provider.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_openid_connect_provider) | resource |
 | [aws_iam_policy.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
 | [aws_iam_role.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy_attachment.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
 | [aws_iam_policy_document.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 | [tls_certificate.this](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/data-sources/certificate) | data source |
 

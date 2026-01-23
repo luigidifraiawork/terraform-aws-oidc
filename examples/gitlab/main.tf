@@ -78,10 +78,14 @@ resource "aws_iam_role" "deploy" {
   name        = local.deploy_role_name
   description = "Role with limited permissions assumed by the OIDC role for deployment purposes"
 
-  assume_role_policy  = data.aws_iam_policy_document.deploy.json
-  managed_policy_arns = [aws_iam_policy.deploy_ecr.arn]
+  assume_role_policy = data.aws_iam_policy_document.deploy.json
 
   tags = { "Name" : local.deploy_role_name }
+}
+
+resource "aws_iam_role_policy_attachment" "deploy" {
+  role       = aws_iam_role.deploy.name
+  policy_arn = aws_iam_policy.deploy_ecr.arn
 }
 
 module "gitlab" {
